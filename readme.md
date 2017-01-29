@@ -1,5 +1,7 @@
 # append-transform [![Build Status](https://travis-ci.org/avajs/append-transform.svg?branch=master)](https://travis-ci.org/avajs/append-transform) [![Coverage Status](https://coveralls.io/repos/github/avajs/append-transform/badge.svg?branch=master)](https://coveralls.io/github/avajs/append-transform?branch=master)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/append-transform.svg)](https://greenkeeper.io/)
+
 > Install a transform to `require.extensions` that always runs last, even if additional extensions are added later
 
 The [typical require extension](https://gist.github.com/jamestalmage/df922691475cff66c7e6) looks something like this:

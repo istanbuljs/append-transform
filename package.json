@@ -32,11 +32,11 @@
     "default-require-extensions": "^1.0.0"
   },
   "devDependencies": {
-    "ava": "^0.14.0",
+    "ava": "^0.17.0",
     "coveralls": "^2.11.6",
     "fake-module-system": "^0.3.0",
-    "nyc": "^6.2.1",
-    "xo": "^0.15.1"
+    "nyc": "^10.1.2",
+    "xo": "^0.17.1"
   },
   "xo": {
     "ignores": [

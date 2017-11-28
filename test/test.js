@@ -103,7 +103,7 @@ test('installs a transform for a completely new file extension (handler added af
 	system.appendTransform(append('bar'), '.es6');
 
 	system.extensions['.es6'] = function (module, filename) {
-		let content = system.content[filename];
+		const content = system.content[filename];
 		module._compile(content + ' es6', filename);
 	};
 
@@ -135,13 +135,13 @@ test('accommodates a future extension that adds, then reverts itself', t => {
 	system.installConventionalTransform(append('b'));
 	const rollback = system.extensions['.js'];
 	system.installConventionalTransform(append('c'));
-	let module = system.load('/foo.js');
+	const module = system.load('/foo.js');
 
 	t.is(module.code, 'foo b c always-last');
 
 	system.extensions['.js'] = rollback;
 	delete system.cache['/foo.js'];
-	let module2 = system.load('/foo.js');
+	const module2 = system.load('/foo.js');
 
 	t.is(module2.code, 'foo b always-last');
 });

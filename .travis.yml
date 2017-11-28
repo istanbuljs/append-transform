@@ -1,11 +1,13 @@
+sudo: false
 language: node_js
 node_js:
-  - '6'
-  - '5'
-  - '4'
-  - '0.12'
-  - '0.10'
-before_install:
-  - 'npm install -g npm@3'
-after_script:
+  - 'stable'
+  - 8
+  - 6
+  - 4
+cache: yarn
+env:
+  global:
+    COVERALLS_PARALLEL: true
+after_success:
   - 'cat ./coverage/lcov.info | ./node_modules/.bin/coveralls'

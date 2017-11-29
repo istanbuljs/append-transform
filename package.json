@@ -1,6 +1,6 @@
 {
   "name": "append-transform",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "description": "Install a transform to `require.extensions` that always runs last, even if additional extensions are added later.",
   "license": "MIT",
   "repository": "istanbuljs/append-transform",

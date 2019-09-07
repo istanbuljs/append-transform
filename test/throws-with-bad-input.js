@@ -1,5 +1,5 @@
 import test from 'ava';
-import appendTransform from '../';
+import appendTransform from '..';
 
 test('throws if getter but no setter', t => {
 	const extensions = {

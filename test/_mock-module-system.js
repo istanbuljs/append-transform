@@ -1,14 +1,13 @@
 'use strict';
 
-var appendTransform = require('../');
-var ModuleSystem = require('fake-module-system');
+const ModuleSystem = require('fake-module-system');
+const appendTransform = require('..');
 
-ModuleSystem.prototype.installConventionalTransform = function (transformFn, ext) {
-	ext = ext || '.js';
-	var originalExtension = this.extensions[ext];
+ModuleSystem.prototype.installConventionalTransform = function (transformFn, ext = '.js') {
+	const originalExtension = this.extensions[ext];
 
 	this.extensions[ext] = function (module, filename) {
-		var originalCompile = module._compile;
+		const originalCompile = module._compile;
 		module._compile = function (code, filename) {
 			module._compile = originalCompile;
 			module._compile(transformFn(code, filename), filename);

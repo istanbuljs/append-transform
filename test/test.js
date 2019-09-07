@@ -1,7 +1,7 @@
 import fs from 'fs';
 import test from 'ava';
-import appendTransform from '../';
 import MockSystem from './_mock-module-system';
+import appendTransform from '..';
 
 // Transform that just appends some text
 function append(message) {
@@ -119,6 +119,7 @@ test('installs a transform for a completely new file extension (handler never ad
 });
 
 test('test actual require', t => {
+	// eslint-disable-next-line node/no-deprecated-api
 	require.extensions['.foo'] = function (module, filename) {
 		module._compile(fs.readFileSync(filename, 'utf8'), filename);
 	};

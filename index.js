@@ -1,4 +1,5 @@
 'use strict';
+const path = require('path');
 const js = require('default-require-extensions/js');
 
 module.exports = appendTransform;
@@ -8,7 +9,7 @@ let count = 0;
 // eslint-disable-next-line node/no-deprecated-api
 function appendTransform(transform, ext = '.js', extensions = require.extensions) {
 	// Generate a unique key for this transform
-	const key = __dirname + count; // eslint-disable-line no-path-concat
+	const key = path.join(__dirname, count.toString());
 	count++;
 
 	let forwardGet;

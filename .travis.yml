@@ -1,11 +1,8 @@
-sudo: false
 language: node_js
 node_js:
-  - 'stable'
+  - 12
+  - 10
   - 8
-  - 6
-  - 4
-cache: yarn
 env:
   global:
     COVERALLS_PARALLEL: true

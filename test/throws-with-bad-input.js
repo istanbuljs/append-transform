@@ -15,7 +15,8 @@ test('throws if getter but no setter', t => {
 });
 
 test('throws if setter but no getter', t => {
-	const extensions = { // eslint-disable-line accessor-pairs
+	const extensions = {
+		// eslint-disable-next-line accessor-pairs
 		set '.js'(foo) {
 			t.fail();
 		}

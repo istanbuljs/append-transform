@@ -36,12 +36,15 @@
     "ava": "^2.3.0",
     "coveralls": "^3.0.6",
     "fake-module-system": "^0.3.0",
-    "nyc": "^14.1.1",
-    "xo": "^0.24.0"
+    "nyc": "^15.0.0",
+    "xo": "^0.25.3"
   },
   "xo": {
     "ignores": [
       "test/_mock-module-system.js"
-    ]
+    ],
+    "rules": {
+      "ava/no-import-test-files": 0
+    }
   }
 }

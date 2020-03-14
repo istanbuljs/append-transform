@@ -30,8 +30,8 @@ function appendTransform(transform, ext = '.js', extensions = require.extensions
 			return descriptor.get();
 		};
 
-		forwardSet = function (val) {
-			descriptor.set(val);
+		forwardSet = function (value) {
+			descriptor.set(value);
 			return forwardGet();
 		};
 	} else {
@@ -39,9 +39,9 @@ function appendTransform(transform, ext = '.js', extensions = require.extensions
 			return descriptor.value;
 		};
 
-		forwardSet = function (val) {
-			descriptor.value = val;
-			return val;
+		forwardSet = function (value) {
+			descriptor.value = value;
+			return value;
 		};
 	}
 

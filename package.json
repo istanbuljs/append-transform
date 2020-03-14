@@ -13,7 +13,7 @@
     "node": ">=8"
   },
   "scripts": {
-    "pretest": "xo",
+    "pretest": "if-ver -ge 10.18 || exit 0; xo",
     "test": "nyc --reporter=lcov --reporter=text ava"
   },
   "files": [
@@ -36,8 +36,9 @@
     "ava": "^2.3.0",
     "coveralls": "^3.0.6",
     "fake-module-system": "^0.3.0",
+    "if-ver": "^1.1.0",
     "nyc": "^15.0.0",
-    "xo": "^0.25.3"
+    "xo": "^0.28.0"
   },
   "xo": {
     "ignores": [
